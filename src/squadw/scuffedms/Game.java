@@ -36,6 +36,8 @@ public class Game extends JFrame {
         setFocusTraversalKeysEnabled(false);
         setTitle("Scuffed Minesweeper");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
+        catch (Exception e) { System.out.println(e); }
         try { setIconImage(ImageIO.read(getClass().getResource("/squadw/scuffedms/resources/images/flag.png"))); }
         catch(IOException e) { System.out.println(e); }
     }

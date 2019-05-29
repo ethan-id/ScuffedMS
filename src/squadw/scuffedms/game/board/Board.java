@@ -13,7 +13,7 @@ public class Board {
     private int size;
     private int diff;
     private int numBombs;
-    private int firstClick;
+    private int numBombsLeft;
     private Tile[][] board;
 
     public Board(int size, int diff) {
@@ -32,7 +32,11 @@ public class Board {
         return board;
     }
 
-    private void checkForBombs(int x, int y) {
+    public int getTotalBombs() {
+        return numBombs;
+    }
+
+    private void setNumBombs(int x, int y) {
         int mines = 0;
         int xMax = x+1;
         int yMax = y+1;
@@ -51,6 +55,19 @@ public class Board {
         board[x][y].setNumBombs(mines);
     }
 
+    private void numBombsLeft() {
+        int numMarked = 0;
+
+        for (Tile[] b: board) {
+            for (Tile t : b) {
+                if (t.getTileState() == Tile.MARKED) {
+                    numMarked++;
+                }
+            }
+        }
+        numBombsLeft = numMarked;
+    }
+
     private void tileMouseListener() {
         for (Tile[] b: board)
             for (Tile t : b) {
@@ -66,10 +83,6 @@ public class Board {
                     public void mouseReleased(MouseEvent e) {
                         if (pressed) {
                             revealBoard(t.getCoords()[0], t.getCoords()[1]);
-                            firstClick++;
-                            if (firstClick == 1) {
-                                checkForBomb(t.getCoords()[0], t.getCoords()[1]);
-                            }
 
                             if (t.getTileState() == Tile.MARKED && SwingUtilities.isRightMouseButton(e)) t.setClosed();
                             else if (SwingUtilities.isRightMouseButton(e) && t.getTileState() != Tile.OPENED) t.setMarked();
@@ -238,7 +251,7 @@ public class Board {
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                checkForBombs(i, j);
+                setNumBombs(i, j);
                 board[i][j].setCoords(i, j);
                 if (board[i][j] instanceof Mine) {
                     numBombs++;

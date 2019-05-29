@@ -23,4 +23,8 @@ public class GButton extends JButton {
     public void addButtonToFrame(JFrame frame) {
         frame.add(this, c);
     }
+
+    public void addButtonToFrame(JPanel frame) {
+        frame.add(this, c);
+    }
 }

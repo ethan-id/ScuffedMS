@@ -1,5 +1,6 @@
 # ScuffedMS
-A simple Minesweeper clone written in Java. 
+A simple Minesweeper clone written in Java. <br/>
+_This project was developed in 2019 during my sophomore year of highschool_
 ## Getting Started
 ### Playing
 The game offers 3 different sizes and 3 different difficulties. You can also use custom sizes and difficulties. *See [running](#Running)*
@@ -17,9 +18,7 @@ java -jar ScuffedMS.jar [size] [difficulty]
 ### Latest Release
 You can grab the latest version [here](https://github.com/squadw/ScuffedMS/releases/latest)
 ## Authors
-* **Austin Leuenhagen** - *Main functionality & UI* - [Lui798](https://github.com/Lui798)
-* **Ethan Hancock** - *Finding new features & testing* - [ETRulz](https://github.com/ETRulz)
-## Demo Video
-[![Minesweeper Demo](https://img.youtube.com/vi/d4mM6ToZqpw/mqdefault.jpg)](https://youtu.be/d4mM6ToZqpw)
+* **Austin Leuenhagen** - [Lui798](https://github.com/Lui798)
+* **Ethan Hancock** - [ethan-id](https://github.com/ethan-id)
 ## Flow Chart
 ![Flow Chart](https://cdn.discordapp.com/attachments/543523807231475717/585593310903795712/SquadW_Scuffed_Tetris_Flowchart.jpeg)

@@ -20,4 +20,3 @@ You can grab the latest version [here](https://github.com/squadw/ScuffedMS/relea
 ## Authors
 * **Austin Leuenhagen** - [Lui798](https://github.com/Lui798)
 * **Ethan Hancock** - [ethan-id](https://github.com/ethan-id)
-* 

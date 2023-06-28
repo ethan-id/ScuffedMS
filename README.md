@@ -16,7 +16,7 @@ You can run it from command line for custom size and difficulty. More info [here
 java -jar ScuffedMS.jar [size] [difficulty]
 ```
 ### Latest Release
-You can grab the latest version [here](https://github.com/squadw/ScuffedMS/releases/latest)
+You can grab the latest version
 ## Authors
 * **Austin Leuenhagen** - [Lui798](https://github.com/Lui798)
 * **Ethan Hancock** - [ethan-id](https://github.com/ethan-id)
